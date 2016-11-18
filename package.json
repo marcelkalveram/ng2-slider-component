@@ -6,7 +6,7 @@
   "main": "ng2-slider.component.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bogdan1975/ng2-slider-component.git"
+    "url": "https://github.com/marcelkalveram/ng2-slider-component"
   },
   "bugs": {
     "url": "https://github.com/Bogdan1975/ng2-slider-component/issues"
