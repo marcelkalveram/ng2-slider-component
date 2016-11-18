@@ -57,6 +57,7 @@ export class Ng2SliderComponent implements ISkinable{
     // @Input() stylePath: string;
 
     @Output('onRangeChanged') rangeChangedEvent = new EventEmitter();
+    @Output('onValueChanged') valueChangedEvent = new EventEmitter();
 
     @ViewChild('ribbon') ribbon:ElementRef;
     @ViewChild('start') startRef:ElementRef;
@@ -316,6 +317,11 @@ export class Ng2SliderComponent implements ISkinable{
         this.rangeChangedEvent.emit(this);
     }
 
+    valueChangedTrigger() {
+        //this.rangeChangedEvent.emit({start: this.startValue, end: this.endValue});
+        this.valueChangedEvent.emit(this);
+    }
+
     setStartValue(v) {
         this.startValue = v;
         this.valueChanged(RangeHandle.Start);
@@ -341,6 +347,7 @@ export class Ng2SliderComponent implements ISkinable{
         if (event.elementId == this.id+'-right-handle') handle = RangeHandle.End;
         // this.refreshInputBox(event.boundingRect, handle);
         this.refreshInputBoxByPercent(event.relativePercentHorisontal, handle);
+        this.valueChangedTrigger();
     }
 
     initHandlers(name: string, event: IEventSlideAble) {
