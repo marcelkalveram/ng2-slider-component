@@ -28,7 +28,7 @@ var Ng2SliderComponent = (function () {
         this.renderer = renderer;
         // @Input() stylePath: string;
         this.rangeChangedEvent = new core_1.EventEmitter();
-        this.rangeChangedEvent = new core_1.EventEmitter();
+        this.valueChangedEvent = new core_1.EventEmitter();
         this.isRange = true;
         this._skins = ng2_slider_skins_1.skins;
         this.handlers = {

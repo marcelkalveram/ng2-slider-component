@@ -2,5 +2,3 @@
 .gitignore
 .npmignore
 .idea
-*.ts
-!*.d.ts
